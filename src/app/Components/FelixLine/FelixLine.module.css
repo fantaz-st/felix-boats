@@ -1,0 +1,151 @@
+.container {
+  padding: 15vh 7.5vw;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  height: fit-content;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5vh;
+}
+
+/* Text/title styles */
+.text {
+  align-self: center;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5vh;
+  margin-bottom: 2rem;
+}
+
+.title {
+  /* Customize as needed */
+}
+
+.subTitle {
+  /* Customize as needed */
+}
+
+/* Default desktop layout: 3-column grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  padding-bottom: 0;
+}
+
+.card {
+  position: relative;
+  border-radius: 1.5rem;
+  background-color: var(--color-bg-lighter);
+  padding: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  overflow: hidden;
+}
+
+/* Reflective gradient effect on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.card:hover::before {
+  left: 120%;
+  transition: left 0.5s ease-in-out;
+}
+
+.cardTitle {
+  font-family: var(--font-space-grotesk);
+}
+
+/* Example styling for card description */
+.cardDescription {
+  /* Customize as needed */
+}
+
+/* Image container inside the card */
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Button area in the image */
+.cardButton {
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  padding: 0 1vw;
+}
+
+/* Example image wrapper class if needed */
+.image-wrapper {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 6px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6;
+}
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ------------------------------ */
+/* Mobile: horizontal scrollable  */
+/* ------------------------------ */
+@media (max-width: 768px) {
+  /* Adjust container padding for mobile */
+  .container {
+    padding: 10vw 5vw;
+  }
+
+  /* Use flex with horizontal scroll and snap */
+  .cards {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 2vw;
+    padding-bottom: 2rem;
+  }
+
+  /* Each card takes ~80% of viewport width; show a 'peek' of the next card */
+  .card {
+    flex: 0 0 90%;
+    scroll-snap-align: start;
+    /* margin-right: 4vw;  */
+    padding: 7vw 5vw;
+  }
+
+  /* Adjust image height for mobile */
+  .cardImage {
+    height: 55vw;
+  }
+
+  .cardButton {
+    padding: 0 2vw;
+  }
+}
