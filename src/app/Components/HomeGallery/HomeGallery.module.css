@@ -25,12 +25,14 @@
 }
 
 .item {
-  position: relative; /* for <Image fill> */
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   min-height: 42.5vh;
-  /* aspect-ratio: 4 / 3; */
-  /* background-color: red; */
+  /* opacity: 0;
+  filter: blur(8px); 
+  transform: translateY(25%);*/
+  will-change: filter, transform;
 }
 .item img {
   object-fit: cover;
