@@ -10,7 +10,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SplitType from "split-type";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const HomeGallery = () => {
   const containerRef = useRef(null);
@@ -112,7 +111,7 @@ const HomeGallery = () => {
           {homeGalleryImages.map((image) => (
             <div key={image.id} className={classes.item}>
               <a data-fancybox='gallery' href={image.image}>
-                <Image src={image.image} fill alt={image.alt} style={{ objectFit: "cover" }} />
+                <Image src={image.image} fill alt={image.alt} style={{ objectFit: "cover" }} sizes={image.sizes} />
               </a>
             </div>
           ))}

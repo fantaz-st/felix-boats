@@ -13,7 +13,7 @@ const Hero = () => {
         </Button>
       </div>
       <div className={classes.background}>
-        <Image src='/assets/images/hero-bg.jpeg' fill alt='Boat on the water' />
+        <Image src='/assets/images/hero-bg.jpeg' fill alt='Boat on the water' sizes='100vw' />
       </div>
       <div className={classes.overlay}></div>
     </div>

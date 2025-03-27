@@ -16,7 +16,7 @@ const HomeContactForm = () => {
         {/* Left side: image */}
         <div className={classes.left}>
           <div className={classes.imageWrapper}>
-            <Image src='/assets/images/hero-bg.jpeg' alt='Felix boats contact form image' fill />
+            <Image src='/assets/images/hero-bg.jpeg' alt='Felix boats contact form image' fill sizes='(min-width: 1200px) calc(22.17vw + 819px), (min-width: 1160px) calc(40vw + 873px), (min-width: 900px) calc(37.5vw + 823px), 90vw' />
           </div>
         </div>
 

@@ -1,7 +1,8 @@
 import { Poppins, Space_Grotesk } from "next/font/google";
+import { ReactLenis } from "lenis/react";
 import "./reset.css";
 import "./globals.css";
-import { ReactLenis } from "lenis/react";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
