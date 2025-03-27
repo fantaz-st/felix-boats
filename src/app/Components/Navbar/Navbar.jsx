@@ -1,10 +1,28 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useEffect } from "react";
 import classes from "./Navbar.module.css";
 import Button from "../Button/Button";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={scrolled ? `${classes.container} ${classes.scrolled}` : classes.container}>
       <div className={classes.inner}>

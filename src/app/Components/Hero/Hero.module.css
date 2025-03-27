@@ -1,7 +1,8 @@
 .container {
   position: relative;
+  height: 100dvh;
+  min-height: 100svh;
   width: 100vw;
-  height: 100vh;
   overflow: visible;
   display: flex;
   align-items: center;
