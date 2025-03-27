@@ -19,6 +19,7 @@
   flex-direction: column;
   gap: 1.5rem;
   color: #fff;
+  visibility: hidden;
 }
 
 .title {
@@ -28,6 +29,11 @@
   line-height: 1;
   text-transform: uppercase;
   user-select: none;
+  overflow: hidden;
+}
+
+.title span {
+  transform: translateY(100%);
 }
 
 .subtitle {
@@ -37,6 +43,7 @@
   font-weight: 400;
   line-height: 1.6;
   margin: 0 auto;
+  opacity: 0;
 }
 
 .background {
