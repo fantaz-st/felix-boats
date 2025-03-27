@@ -70,4 +70,7 @@
     width: 42.5vw;
     height: 42.5vw;
   }
+  .text {
+    width: 100%;
+  }
 }

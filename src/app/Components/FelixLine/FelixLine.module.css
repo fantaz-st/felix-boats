@@ -148,4 +148,7 @@
   .cardButton {
     padding: 0 2vw;
   }
+  .text {
+    width: 100%;
+  }
 }

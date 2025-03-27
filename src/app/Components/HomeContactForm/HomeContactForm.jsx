@@ -24,7 +24,7 @@ const HomeContactForm = () => {
         <div className={classes.right}>
           <form className={classes.form}>
             <div className={classes.text}>
-              <h2 className={classes.title}>Contact Us</h2>
+              <h1 className={classes.title}>Contact Us</h1>
               <p className={classes.subTitle}>We are always here to help you with any questions you may have. Please feel free to reach out to us at any time.</p>
             </div>
 

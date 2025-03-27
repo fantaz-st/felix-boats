@@ -60,10 +60,10 @@
 }
 
 .title {
-  font-size: 2rem;
+  /*  font-size: 2rem;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  color: #fff; */
+  margin-bottom: 1rem;
 }
 
 .subTitle {
