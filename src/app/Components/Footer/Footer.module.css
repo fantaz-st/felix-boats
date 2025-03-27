@@ -8,19 +8,43 @@
 .inner {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   align-content: stretch;
+  padding: 0;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1vw;
+  width: 100%;
+}
+
+.copyright {
+  align-self: flex-start;
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 10vw 5vw;
   }
+
   .inner {
     flex-direction: column;
-    gap: 1vh;
+    gap: 4vh;
+  }
+  .flexCol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vw;
+    width: 100%;
+  }
+  .copyright {
+    align-self: center;
   }
 }
