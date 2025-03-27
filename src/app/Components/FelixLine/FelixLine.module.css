@@ -25,12 +25,12 @@
   margin-bottom: 2rem;
 }
 
-.title {
-  /* Customize as needed */
+.title span {
+  opacity: 0;
 }
 
 .subTitle {
-  /* Customize as needed */
+  opacity: 0;
 }
 
 /* Default desktop layout: 3-column grid */

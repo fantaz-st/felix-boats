@@ -24,6 +24,16 @@
   margin-bottom: 2rem;
 }
 
+.title div {
+  line-height: 1.2;
+}
+.title span {
+  opacity: 0;
+}
+
+.subTitle {
+  opacity: 0;
+}
 .item {
   position: relative;
   border-radius: 12px;
@@ -63,10 +73,10 @@
   grid-area: 2 / 3 / 4 / 4;
 }
 .gallery .item:nth-child(5) {
-  grid-area: 3 / 1 / 4 / 2;
+  grid-area: 3 / 2 / 4 / 3;
 }
 .gallery .item:nth-child(6) {
-  grid-area: 3 / 2 / 4 / 3;
+  grid-area: 3 / 1 / 4 / 2;
 }
 
 @media (max-width: 768px) {

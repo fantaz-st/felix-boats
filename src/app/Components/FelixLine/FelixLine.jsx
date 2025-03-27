@@ -1,10 +1,83 @@
+"use client";
+
 import Image from "next/image";
 import classes from "./FelixLine.module.css";
 import Button from "../Button/Button";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import SplitType from "split-type";
+import { useRef } from "react";
 
 const FelixLine = () => {
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const splittedTitle = new SplitType(`.${classes.title}`, {
+        types: "chars",
+        tagName: "span",
+      });
+
+      gsap.set(splittedTitle.chars, {
+        opacity: 0,
+      });
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: `.${classes.title}`,
+            start: "top 80%",
+            end: "bottom top",
+            scrub: 1,
+          },
+        })
+        .to(splittedTitle.chars, {
+          opacity: 1,
+          stagger: 0.03,
+          duration: 0.5,
+        });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: `.${classes.subTitle}`,
+            start: "top 80%",
+            end: "bottom top",
+            scrub: 1,
+          },
+        })
+        .to(`.${classes.subTitle}`, {
+          opacity: 1,
+          duration: 0.5,
+        });
+
+      gsap.fromTo(
+        `.${classes.card}`,
+        {
+          filter: "blur(8px)",
+          opacity: 0,
+          y: "25%",
+        },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: `.${classes.cards}`,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    },
+    { scope: containerRef }
+  );
   return (
-    <div className={classes.container}>
+    <div className={classes.container} ref={containerRef}>
       <div className={classes.inner}>
         <div className={classes.text}>
           <h1 className={classes.title}>The Felix Line</h1>
