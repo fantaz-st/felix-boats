@@ -1,0 +1,71 @@
+.container {
+  overflow: hidden;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.inner {
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: stretch;
+}
+
+.subTitle {
+  text-transform: uppercase;
+}
+
+.marqueeInner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4rem;
+  position: relative;
+  padding: 0;
+  user-select: none;
+  z-index: 9;
+}
+
+/* .card:first-child {
+  color: #ff0000;
+} */
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.gradient:before {
+  background: linear-gradient(to right, #010101, rgba(255, 255, 255, 0));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  pointer-events: none;
+  touch-action: none;
+  left: 0;
+  top: 0;
+}
+
+.gradient:after {
+  background: linear-gradient(to right, #010101, rgba(255, 255, 255, 0));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  pointer-events: none;
+  touch-action: none;
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}

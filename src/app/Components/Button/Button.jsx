@@ -1,10 +1,12 @@
+import Link from "next/link";
 import classes from "./Button.module.css";
 
 const Button = (props) => {
-  return (
-    <button className={props.variant === "up" ? `${classes.container} ${classes.up}` : `${classes.container} ${classes.scale}`} style={{ ...props.style }}>
+  // Create the shared button content.
+  const content = (
+    <>
       <p>{props.children}</p>
-      {props.arrow ? (
+      {props.arrow && (
         <div className={classes.arrow}>
           <svg viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
@@ -15,9 +17,27 @@ const Button = (props) => {
             </g>
           </svg>
         </div>
-      ) : null}
-    </button>
+      )}
+    </>
   );
+
+  // If a link prop is provided, render a Next.js Link.
+  if (props.link) {
+    return (
+      <Link href={props.link} passHref legacyBehavior>
+        <a className={`${classes.container} ${props.variant === "up" ? classes.up : classes.scale}`} style={{ ...props.style }}>
+          {content}
+        </a>
+      </Link>
+    );
+  } else {
+    // Otherwise, render a button element with an optional onClick.
+    return (
+      <button type={props.type || "button"} onClick={props.onClick} className={`${classes.container} ${props.variant === "up" ? classes.up : classes.scale}`} style={{ ...props.style }}>
+        {content}
+      </button>
+    );
+  }
 };
 
 export default Button;

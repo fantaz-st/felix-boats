@@ -1,0 +1,9 @@
+.slideImageWrapper {
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+.slideImageWrapper img {
+  object-fit: cover;
+}

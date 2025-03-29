@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SplitType from "split-type";
+import Marquee from "../Marquee/Marquee";
 
 const HomeGallery = () => {
   const containerRef = useRef(null);
@@ -117,6 +118,7 @@ const HomeGallery = () => {
           ))}
         </div>
       </div>
+      <Marquee />
     </div>
   );
 };

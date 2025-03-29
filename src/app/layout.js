@@ -3,7 +3,11 @@ import { ReactLenis } from "lenis/react";
 import "./reset.css";
 import "./globals.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
+import Navbar from "./Components/Navbar/Navbar";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("./Components/Footer/Footer"), {
+  loading: () => <p>Loading...</p>,
+});
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -24,7 +28,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${poppins.variable} ${spaceGrotesk.variable}`}>
-        <ReactLenis root>{children}</ReactLenis>
+        <ReactLenis root>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReactLenis>
       </body>
     </html>
   );

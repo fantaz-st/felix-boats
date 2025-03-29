@@ -27,7 +27,9 @@ const Navbar = () => {
     <div className={scrolled ? `${classes.container} ${classes.scrolled}` : classes.container}>
       <div className={classes.inner}>
         <div className={classes.logo}>
-          <h1>FELIX Boats</h1>
+          <h1>
+            <a href='/'>FELIX Boats</a>
+          </h1>
         </div>
         <div className={classes.right}>
           <div className={classes.contactUsButton}>
