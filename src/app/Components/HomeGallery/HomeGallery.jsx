@@ -14,6 +14,7 @@ import Marquee from "../Marquee/Marquee";
 
 const HomeGallery = () => {
   const containerRef = useRef(null);
+  const marqueeRef = useRef(null);
 
   // Fancybox setup
   useEffect(() => {
@@ -35,6 +36,7 @@ const HomeGallery = () => {
       gsap.set(splittedTitle.chars, {
         opacity: 0,
       });
+      // gsap.set(marqueeRef.current, { y: "100%" });
 
       gsap
         .timeline({
@@ -63,6 +65,26 @@ const HomeGallery = () => {
           opacity: 1,
           duration: 0.5,
         });
+      gsap.fromTo(
+        marqueeRef.current,
+        {
+          filter: "blur(8px)",
+          opacity: 0,
+          y: "25%",
+        },
+        {
+          filter: "blur(0px)",
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: marqueeRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
 
       const items = gsap.utils.toArray(`.${classes.item}`);
       const pairs = [];
@@ -118,7 +140,9 @@ const HomeGallery = () => {
           ))}
         </div>
       </div>
-      <Marquee />
+      <div ref={marqueeRef} style={{ marginTop: "1vw" }}>
+        <Marquee />
+      </div>
     </div>
   );
 };

@@ -93,3 +93,8 @@ small {
   line-height: 1.4;
   font-family: var(--font-poppins), sans-serif;
 }
+
+.swiper-button-disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}

@@ -1,154 +1,107 @@
-/* -----------------------------
-   LAYOUT WRAPPER
------------------------------ */
 .container {
-  padding: 15vh 7.5vw;
-  position: relative;
   overflow: hidden;
   color: #fff;
-  height: fit-content;
+  height: 100vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #fff;
+  color: #000;
+  position: relative;
 }
 
 .inner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  padding: 4vh 7.5vw;
+}
+.center {
   position: relative;
   gap: 5vh;
-}
-
-.left {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imageWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-  overflow: hidden;
-}
-
-.imageWrapper img {
-  object-fit: cover;
-}
-
-/* -----------------------------
-     FORM CONTAINER
-  ----------------------------- */
-.form {
-  width: 100%;
-  background-color: #111; /* dark form background */
-  border-radius: 1rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 4vh;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
 }
 
-.text {
-  margin-bottom: 1rem;
-}
-
-.title {
-  /*  font-size: 2rem;
-  font-weight: 600;
-  color: #fff; */
-  margin-bottom: 1rem;
-}
-
-.subTitle {
-  color: #ccc;
-  line-height: 1.5;
-}
-
-/* -----------------------------
-     ROWS & GROUPS
-  ----------------------------- */
-.formRow {
+.largeButton {
+  width: fit-content;
+  padding: 10px 10px 10px 50px;
+  background-color: #000;
+  border-radius: 4rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  color: #fff;
+  gap: 5vw;
+  user-select: none;
+  transition: transform 0.1s ease-in;
 }
-
-/* Each label+input pair is a "formGroup" stacked vertically */
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* so each group expands equally in row */
-}
-
-/* label placed above each input */
-.formLabel {
-  font-size: 0.875rem; /* smaller than input text */
-  font-weight: 400;
-  color: #ddd;
-  margin-bottom: 0.25rem; /* small space between label and input */
-}
-
-/* 
-     Inputs: pill shape, white background
-  */
-.input {
-  border: none;
-  border-radius: 9999px; /* pill shape */
+.button {
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 2vh 3vh;
   background-color: #fff;
+  border: 1px solid #fff;
+  transition: background-color 0.1s ease-in;
+}
+.button p {
+  transition: color 0.1s ease-in;
   color: #000;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  outline: none;
 }
 
-.input::placeholder {
-  color: #777;
+.largeButton:hover {
+  transform: translateY(-10px);
+}
+.largeButton:hover .button {
+  background-color: #000;
+}
+.largeButton:hover p {
+  color: #fff;
 }
 
-/* Text area for message */
-.textArea {
-  border: none;
-  border-radius: 1rem;
-  background-color: #ccc;
-  color: #000;
-  font-size: 1rem;
-  padding: 1rem;
-  outline: none;
-  resize: vertical;
-  min-height: 240px;
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: stretch;
+  gap: 10vw;
 }
 
-.submitButton {
-  align-self: flex-end;
-}
-
-/* 
-     MOBILE RESPONSIVENESS
-     - stack the form columns
-  */
 @media (max-width: 768px) {
   .container {
     padding: 10vw 5vw;
   }
-  .inner {
+  .inner,
+  .flex {
     flex-direction: column;
+    padding: 0 10vw 0 0;
   }
-
-  .formRow {
-    flex-direction: column;
+  .flex {
+    align-items: flex-start;
   }
-
-  .imageWrapper {
-    height: 50vh; /* or adjust for mobile */
+  .largeButton {
+    padding: 5px 5px 5px 25px;
   }
-
-  .form {
-    padding: 1rem;
+  .largeButton p {
+    font-size: 3vw;
+  }
+  .button {
+    padding: 2vw 5vw;
   }
 }
