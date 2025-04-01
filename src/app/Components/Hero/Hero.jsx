@@ -37,7 +37,7 @@ const Hero = () => {
     <div className={classes.container} ref={containerRef}>
       <div className={classes.text}>
         <h1 className={classes.title}>Felix Boats</h1>
-        <h3 className={classes.subtitle}>High-performance speed boats that turn heads and dominate the waves.</h3>
+        <p className={classes.subtitle}>High-performance speed boats that turn heads and dominate the waves.</p>
         <Button arrow={true} link='/contact'>
           Contact us
         </Button>

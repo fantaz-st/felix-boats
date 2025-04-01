@@ -14,7 +14,7 @@ const HomeContact = () => {
           </div>
           <div className={classes.flex}>
             <div className={classes.company}>
-              <h3>OBRAZ d.o.o.</h3>
+              <p>OBRAZ d.o.o.</p>
               <p>Biokovska 4, HR-21000 Split</p>
               <p>OIB: 36125969444</p>
             </div>
