@@ -88,6 +88,10 @@
   overflow: hidden;
 }
 
+.cardImage img {
+  object-fit: cover;
+}
+
 /* Button area in the image */
 .cardButton {
   position: absolute;
