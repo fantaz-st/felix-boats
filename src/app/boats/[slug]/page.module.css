@@ -100,3 +100,9 @@
     width: 100%;
   }
 }
+
+.full {
+  height: 100vh;
+  background-color: orangered;
+  position: relative;
+}

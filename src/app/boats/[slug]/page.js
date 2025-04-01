@@ -55,6 +55,7 @@ export default async function BoatPage({ params }) {
             <Steps />
           </div>
         </section>
+        {/* <div className={classes.full}>l</div> */}
         <ContactForm boat={boat} />
       </div>
     );

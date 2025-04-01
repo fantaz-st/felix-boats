@@ -33,8 +33,10 @@ const Steps = () => {
           start: `top-=${index * 20} center-=200`,
           pin: true,
           pinSpacing: false,
-          end: "max",
+          endTrigger: containerRef.current,
+          end: "bottom center+=300",
           invalidateOnRefresh: true,
+          markers: true,
         });
       });
     },
