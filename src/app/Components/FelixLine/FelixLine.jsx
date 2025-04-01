@@ -88,9 +88,9 @@ const FelixLine = () => {
             <h2 className={classes.cardTitle}>Felix 33</h2>
             <p className={classes.cardDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             <div className={classes.cardImage}>
-              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 22.66vw, 71.09vw' />
+              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 35.81vw, 90vw' />
               <div className={classes.cardButton}>
-                <Button variant='up' arrow={true} link='boats/felix33' style={{ width: "100%" }}>
+                <Button variant='up' arrow={true} link='boats/felix33'>
                   Find out more
                 </Button>
               </div>
@@ -101,9 +101,9 @@ const FelixLine = () => {
             <h2 className={classes.cardTitle}>Felix 33</h2>
             <p className={classes.cardDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             <div className={classes.cardImage}>
-              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 22.66vw, 71.09vw' />
+              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 35.81vw, 90vw' />
               <div className={classes.cardButton}>
-                <Button variant='up' arrow={true} link='boats/felix33' style={{ width: "100%" }}>
+                <Button variant='up' arrow={true} link='boats/felix33'>
                   Find out more
                 </Button>
               </div>
@@ -114,9 +114,9 @@ const FelixLine = () => {
             <h2 className={classes.cardTitle}>Felix 33</h2>
             <p className={classes.cardDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
             <div className={classes.cardImage}>
-              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 22.66vw, 71.09vw' />
+              <Image src='/assets/images/hero-bg.jpeg' alt='Felix 33 speed boat' fill sizes='(min-width: 780px) 35.81vw, 90vw' />
               <div className={classes.cardButton}>
-                <Button variant='up' arrow={true} link='boats/felix33' style={{ width: "100%" }}>
+                <Button variant='up' arrow={true} link='boats/felix33'>
                   Find out more
                 </Button>
               </div>
