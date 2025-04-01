@@ -55,7 +55,7 @@ const SwiperGallery = (props) => {
           <SwiperSlide key={props.boat.name + i} /* className='swiper-slide' */>
             <a data-fancybox='gallery' href={photo}>
               <div className={classes.slideImageWrapper}>
-                <Image key={i} src={photo} alt={`${props.boat.name} photo ${i + 1}`} className={classes.boatPhoto} fill />
+                <Image key={i} src={photo} alt={`${props.boat.name} photo ${i + 1}`} className={classes.boatPhoto} fill sizes='(min-width: 1620px) 39.42vw, (min-width: 800px) 574px, (min-width: 700px) calc(68.75vw + 154px), 600px' />
               </div>
             </a>
           </SwiperSlide>

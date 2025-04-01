@@ -36,7 +36,6 @@ const Steps = () => {
           endTrigger: containerRef.current,
           end: "bottom center+=300",
           invalidateOnRefresh: true,
-          markers: true,
         });
       });
     },
