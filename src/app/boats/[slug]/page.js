@@ -5,6 +5,7 @@ import classes from "./page.module.css";
 import SwiperGallery from "@/app/Components/SwiperGallery/SwiperGallery";
 import Image from "next/image";
 import ContactForm from "@/app/Components/ContactForm/ContactForm";
+import Steps from "@/app/Components/Steps/Steps";
 
 export async function generateStaticParams() {
   // Predefine the available boat slugs:
@@ -51,7 +52,7 @@ export default async function BoatPage({ params }) {
         <section className={classes.buyingProcessContainer}>
           <div className={classes.inner}>
             <h1 className={classes.title}>Ordering and Buying</h1>
-            <p className={classes.boatDescription}>{boat.description}</p>
+            <Steps />
           </div>
         </section>
         <ContactForm boat={boat} />

@@ -1,13 +1,15 @@
+import dynamic from "next/dynamic";
+import Navbar from "./Components/Navbar/Navbar";
 import { Poppins, Space_Grotesk } from "next/font/google";
 import { ReactLenis } from "lenis/react";
 import "./reset.css";
 import "./globals.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import Navbar from "./Components/Navbar/Navbar";
-import dynamic from "next/dynamic";
+
 const Footer = dynamic(() => import("./Components/Footer/Footer"), {
   loading: () => <p>Loading...</p>,
 });
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],

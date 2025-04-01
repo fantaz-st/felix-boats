@@ -11,12 +11,9 @@ const FelixLine = dynamic(() => import("./Components/FelixLine/FelixLine"), {
 const Accomplishments = dynamic(() => import("./Components/Accomplishments/Accomplishments"), {
   loading: () => <p>Loading...</p>,
 });
-const HomeContactForm = dynamic(() => import("./Components/HomeContactForm/HomeContactForm"), {
+const HomeContact = dynamic(() => import("./Components/HomeContact/HomeContact"), {
   loading: () => <p>Loading...</p>,
 });
-/* const Footer = dynamic(() => import("./Components/Footer/Footer"), {
-  loading: () => <p>Loading...</p>,
-}); */
 
 export default function Home() {
   return (
@@ -25,7 +22,7 @@ export default function Home() {
       <HomeGallery />
       <FelixLine />
       <Accomplishments />
-      <HomeContactForm />
+      <HomeContact />
     </main>
   );
 }

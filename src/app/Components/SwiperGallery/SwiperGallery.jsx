@@ -1,14 +1,14 @@
 "use client";
-import classes from "./SwiperGallery.module.css";
+import { useEffect } from "react";
+import { Fancybox } from "@fancyapps/ui";
 import Image from "next/image";
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import classes from "./SwiperGallery.module.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useEffect } from "react";
-import { Fancybox } from "@fancyapps/ui";
 
 const Arrow = () => (
   <div className={classes.arrow}>

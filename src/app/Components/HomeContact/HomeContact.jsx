@@ -1,10 +1,6 @@
-"use client";
+import classes from "./HomeContact.module.css";
 
-import Image from "next/image";
-import Button from "../Button/Button";
-import classes from "./HomeContactForm.module.css";
-
-const HomeContactForm = () => {
+const HomeContact = () => {
   return (
     <div className={classes.container}>
       <div className={classes.inner}>
@@ -20,14 +16,14 @@ const HomeContactForm = () => {
             <div className={classes.company}>
               <h3>OBRAZ d.o.o.</h3>
               <p>Biokovska 4, HR-21000 Split</p>
-              <p>OIB:36125969444</p>
+              <p>OIB: 36125969444</p>
             </div>
             <div className={classes.contact}>
               <p>
                 Email: <a href='mailto:info@felixboats.com'>info@felixboats.com</a>
               </p>
               <p>
-                Phone: <a href='phone:+385 997973959'>+385 99 797 3959</a>
+                Phone: <a href='tel:+385997973959'>+385 99 797 3959</a>
               </p>
             </div>
           </div>
@@ -37,4 +33,4 @@ const HomeContactForm = () => {
   );
 };
 
-export default HomeContactForm;
+export default HomeContact;
